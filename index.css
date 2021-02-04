@@ -1,0 +1,482 @@
+*,
+*:before,
+*:after
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #000;
+  width: 100vw;
+  padding: 0%;
+  text-align: justify;
+}
+
+a#brand, a.nav-link {
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #000;
+  margin-left: 0.5em;
+  margin-right: 0.5em; 
+}
+
+.container {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+a:hover, a.nav-link:hover {
+  color: #90ee90 !important;
+  text-decoration: none !important;
+  transition: color .1s ease-in
+}
+
+a.link {
+  color: #1eb01e;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  height: calc(100vh - 70px);
+  min-height: 100%;
+}
+
+html {
+  overflow: auto;
+}
+
+nav {
+  margin: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  /*background-color: rgba(255,255,255,0.8);*/
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255, 0));
+}
+
+.dropdown-content {
+  display: block;
+}
+
+a.selected {
+  color: #000;
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: #000 !important;
+}
+
+#brand {
+  font-size: 190%;
+  font-weight: 400;
+}
+
+#brand img {
+  max-width: 10vw; 
+}
+
+.nav-link {
+  font-size: 100%;
+  font-weight: 300;
+}
+
+.container.main {
+  max-width: 96vw;
+}
+
+.project-title {
+  display: none;
+  position: absolute;
+  margin-left: -31%;
+  margin-top: 16%;
+  font-weight: 700;
+  font-size: 200%;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+img, video {
+  border-radius: 1px;
+}
+
+.project-item {
+  display: inline;
+  margin-bottom: -2vh;
+}
+
+.project-item figure a img {
+  /*max-width: 46vw;*/
+  max-width: 100%;
+}
+
+.project-item:hover .project-title {
+  display: inline;
+  /*transition: inline .05s linear;*/
+}
+
+.project-item:hover figure a img {
+  opacity: 0.15;
+  transition: opacity .2s ease-in;
+}
+
+.portfolio-grid {
+  width: 100%;
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "spotify xylophone"
+             "dance temp"
+}
+
+#spotify {
+  grid-area: spotify;
+  width: 100%;
+}
+
+#xylophone {
+  grid-area: xylophone;
+  width: 100%;
+}
+
+#dance {
+  grid-area: dance;
+  width: 100%;
+}
+
+#temp {
+  grid-area: temp;
+  width: 100%;
+}
+
+
+footer {
+  text-align: center;
+  padding-bottom: 3vh;
+  font-size: 80%;
+}
+
+
+/*CONTACT PAGE*/
+
+
+#contact-page {
+  height: 60vh;
+}
+
+.contact-grid {
+  width: 100%;
+  display: grid;
+  grid-gap: 5vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "blurb contact"
+}
+
+#blurb {
+  grid-area: blurb;
+}
+
+#blurb figure img {
+  max-width: 90%;
+  padding-left: 10%;
+}
+
+#about-text {
+  padding-top: 5%;
+  width: 90%;
+  padding-left: 10%;
+  text-align: justify;
+}
+
+#contact-info {
+  grid-area: contact;
+  text-align: center;
+  margin-top: 30%;
+  left: 50%;
+}
+
+
+/*PROJECT PAGES*/
+
+/*PROCESS*/
+
+
+h1.title {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 300%;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 250% !important;
+  font-weight: 700 !important;
+}
+
+section {
+  padding-top: 2vh;
+  padding-bottom: 5%;
+}
+
+.centerlink {
+  text-align: center !important;
+  font-size: 1.5vw;
+}
+
+.banner figure img {
+  max-width: 90%;
+}
+
+.banner {/*
+  margin-top: -10%;*/
+  max-width: 70vw;
+  margin-left: 70%;
+}
+
+img.smaller {
+  max-width: 60%;
+}
+
+.center {
+  text-align: center;
+}
+
+
+.info-grid-xylophone {
+  display: grid;
+  width: 100%;
+  grid-gap: 2vw;
+  grid-template-columns: 1.4fr 3fr 0.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "txt pic"
+}
+
+.info-grid-spotify {
+  display: grid;
+  width: 100%;
+  grid-gap: 2vw;
+  grid-template-columns: 7fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas: "pic txt"
+}
+
+.info-grid-dance {
+  display: grid;
+  width: 100%;
+  grid-gap: 2vw;
+  grid-template-columns: 4fr 7fr;
+  grid-template-rows: auto;
+  grid-template-areas: "txt pic"
+}
+
+.project-main-pic {
+  grid-area: pic;
+  max-width: 100%;
+  margin-left: 3vw;
+  border-radius: 1px;
+}
+
+
+.project-main-cap {
+  grid-area: txt;
+  max-width: 100%;
+  font-size: 110%;
+  line-height: 2;
+  font-weight: 400;
+  text-align: justify;
+}
+
+
+#spotify-main-pic {
+  grid-area: pic;
+  max-width: 100%;  
+  margin-left: 0;
+  border-radius: 1px;
+}
+
+
+#spotify-main-cap {
+  grid-area: txt;
+  max-width: 100%;
+  font-size: 1.2vw;
+  line-height: 2;
+  font-weight: 400;
+  text-align: justify;
+}
+
+
+.orange {
+  color: #ffa500;
+}
+
+.process-flex {
+  display: flex;
+  line-height: 1.8;
+  width: 100%;
+  font-size: 1vw;
+}
+
+.col {
+  flex: 1;
+}
+
+.left-col {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.mid-col {
+  margin-left: 2.5%;
+  padding-left: 2.5%;
+  margin-right: 2.5%;
+  padding-right: 2.5%;
+}
+
+.right-col {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+.col > figure {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#process-first-cap {
+  text-align: justify;
+}
+
+#process-second-cap {
+  text-align: justify;
+}
+
+#process-third-cap {
+  text-align: justify;
+}
+
+.full-img {
+  max-width: 100%;
+}
+
+
+/*PROTOTYPING*/
+
+.prototype-flex {
+  display: flex;
+  line-height: 1.8;
+  width: 100%;
+  font-size: 1vw;
+}
+
+.proto-item {
+  width: 100%;
+}
+
+#proto-right-col {
+  position: relative;
+}
+
+#proto-right-col .bottom {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+}
+
+.half-img {
+  max-width: 49.5%;
+  display: inline;
+}
+
+
+/*FINAL*/
+
+.final-flex {
+  display: flex;
+  line-height: 1.8;
+  width: 100%;
+  font-size: 1vw;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+}
+
+.final-flex > .left-col {
+  padding-right: 2em;
+}
+.final-flex > .right-col {
+  padding-left: 2em;
+}
+
+.final-img {
+  width: 100%;
+}
+
+.col > .final-img {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+#final-right-col {
+  position: relative;
+}
+
+#final-right-col .bottom {
+  position: absolute;
+  bottom: 0.7em;
+  left: 0;
+}
+
+.demo {
+  margin: 2em;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+.demo > p {
+  padding-top: 1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.demo > figure {
+  padding: 1em;
+}
+
+
+/*SPOTIFY*/
+
+.spotify-process-flex {
+  display: flex;
+  line-height: 1.8;
+  width: 100%;
+  font-size: 1vw;
+}
+
+.spotify-inner-flex {
+  display: flex;
+}
+
+#spotify-process-cap {
+  text-align: justify;
+  font-size: 1vw;
+}
+
+
