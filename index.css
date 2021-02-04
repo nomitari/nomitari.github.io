@@ -90,6 +90,7 @@ a.selected {
 
 .container.main {
   max-width: 96vw;
+  margin-bottom: 3em;
 }
 
 .project-title {
