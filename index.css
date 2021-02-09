@@ -31,6 +31,13 @@ a#brand, a.nav-link {
   text-align: justify;
 }
 
+.construction {
+  height: 50vh;
+  margin-top: 20vh;
+  text-align: center;
+  font-size: 130%;
+}
+
 a:hover, a.nav-link:hover {
   color: #90ee90 !important;
   text-decoration: none !important;
