@@ -23,14 +23,13 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg sticky-top">
-            <a class="navbar-brand" id="brand" href="../index.html">
-                <img src="../img/brand.png" alt="brand"/>
-                <!-- Nomi Tari -->
+            <a class="navbar-brand" id="brand" href="/">
+                <img src="../img/brand.png" alt="Nomi Tari"/>
             </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link selected" href="../index.html">Portfolio</a>
+                        <a class="nav-link selected" href="/">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../contact.html">Contact</a>
@@ -44,13 +43,13 @@
             <section class="info-grid-dance">
                 <div>
                     <figure>
-                        <img class="right-img" src="../img/mikey-1.jpg">
+                        <img class="right-img full-img" src="../img/mikey-1.jpg">
                     </figure>
                 </div>
                 <div>
-                    <div class="left-text">
+                    <div>
                         <p>
-                            This dance visualizer program allows the user to create and view a dance sequence as an ASCII animation. Developed as an exploration of ASCII art, this project aims to interactively intersect dance and programming. The user of this program can make selections from a library of dance moves and genres, optionally defining time spans for each move they select. The final sequence is then played out on the screen in ASCII characters.
+                            This dance visualizer program allows the user to create and view a dance sequence as an ASCII animation. Developed as an experimentation of ASCII art, this project aims to create an interaction between dance and programming. The user of this program can select from a library of dance moves and genres, optionally defining time spans for each move she selects. The final sequence is then played out on the screen in ASCII characters.
                         </p>
                         <br/>
                         <img class="right-img smaller" src="../img/mikey-1-ascii.png">
@@ -59,7 +58,43 @@
             </section>
             <section class="process">
                 <h2>Process</h2>
-                <p></p>
+                <br>
+                <p>
+                    To develop this C++ program, I built classes of different dance styles that contained libraries of dance moves. Each move is represented by a series of ASCII image files that play out like an animation. To create these images, I took photos of a dancer performing each dance move. I extracted an image of the dancer from each photograph and converted it to an ASCII image, building a film-like collection of images to display.
+                </p>
+                <div class="horizontal-mini-flex" style="margin-top: 3em;">
+                    <div class="col left-col" style="padding-right: 10vw;">
+                        <div class="horizontal-mini-flex dance-pics">
+                            <figure>
+                                <img class="full-img dance-gallery" src="../img/mikey-3.jpg">
+                            </figure>
+                            <figure>
+                                <img class="full-img dance-gallery" src="../img/mikey-3-ascii.png">
+                            </figure>     
+                        </div>
+                        <div class="horizontal-mini-flex dance-pics">
+                            <figure>
+                                <img class="full-img dance-gallery" src="../img/mikey-2.jpg">
+                            </figure>
+                            <figure>
+                                <img class="full-img dance-gallery" src="../img/mikey-2-ascii.png">
+                            </figure>
+                        </div>
+                        <p>
+                            I used the photos that I took to generate ASCII-art image files of each dance move.
+                        </p> 
+                    </div>
+                    <div class="col right-col" style="width: 60vw;">
+                        <figure style="width: 45vw; padding-right: 3vw;">
+                            <video style="width: 100%;" controls>
+                                <source src="../vid/headspin.mov" type="video/mp4">
+                            </video> 
+                        </figure>
+                        <p>
+                            Once compiled, these ASCII files became short animations of each move being performed.
+                        </p>  
+                    </div>
+                </div>
             </section>
         </div>
 

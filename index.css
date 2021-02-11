@@ -39,6 +39,7 @@ a#brand, a.nav-link {
 }
 
 a:hover, a.nav-link:hover {
+  cursor: crosshair;
   color: #90ee90 !important;
   text-decoration: none !important;
   transition: color .1s ease-in
@@ -49,6 +50,7 @@ a.link {
 }
 
 a:hover {
+  cursor: crosshair;
   text-decoration: none;
   color: #000;
 }
@@ -106,7 +108,7 @@ a.selected {
   margin-left: -31%;
   margin-top: 16%;
   font-weight: 700;
-  font-size: 200%;
+  font-size: 2vw;
 }
 
 figure {
@@ -136,6 +138,7 @@ img, video {
 }
 
 .project-item:hover figure a img {
+  cursor: crosshair;
   opacity: 0.15;
   transition: opacity .2s ease-in;
 }
@@ -174,7 +177,7 @@ img, video {
 footer {
   text-align: center;
   padding-bottom: 3vh;
-  font-size: 80%;
+  font-size: 0.8vw;
 }
 
 
@@ -182,11 +185,13 @@ footer {
 
 
 #contact-page {
-  height: 60vh;
+  height: 75vh;
+  font-size: 100%;
 }
 
 .contact-grid {
-  width: 100%;
+  padding-top: 10vh;
+  width: 90%;
   display: grid;
   grid-gap: 5vw;
   grid-template-columns: 1fr 1fr;
@@ -212,10 +217,233 @@ footer {
 
 #contact-info {
   grid-area: contact;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 30%;
+  margin-top: 10vh;
   left: 50%;
 }
+
+#contact-info div {
+  margin: 3vh;
+}
+
+button:hover, button#email-button:hover {
+  cursor: crosshair !important;
+  background-color: #edf0ff;
+}
+
+button, button#email-button {
+  font-weight: 700;
+  padding: 0.7em;
+  border: none;
+  background-color: #edf;
+  border-radius: 5px !important;
+  /*background-color: #000;
+  color: #fff;*/
+}
+
+.fa {
+  margin: 3%;
+}
+
+.icon-link {
+  color: #000;
+}
+
+
+/*  CONTACT MODAL -- https://codepen.io/matmarsiglio/pen/HLIor  */
+
+.modal-container {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2%;
+  background-color: #edf;
+  border-radius: 3%;
+  box-shadow: rgba(149, 157, 165, 0.2) 5px 8px 24px;
+
+}
+
+::placeholder { 
+  color: #1eb01e;
+  opacity: 1; 
+}
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+.modal-container body {
+  font-family: 'Lato', sans-serif;
+  background: #eee;
+  color: #b3aca7;
+}
+
+.modal-container header {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#form {
+  position: relative;
+  width: 475px;
+  margin: 50px auto 50px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #726659;
+  
+  border: solid 1px #888;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #888;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  /*width: 502px;*/
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  
+  outline:none;
+  cursor: crosshair;
+  
+  border: solid 1px #888;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+
+.close:hover {
+  cursor: crosshair;
+}
+
 
 
 /*PROJECT PAGES*/
@@ -226,14 +454,14 @@ footer {
 h1.title {
   padding-top: 1em;
   padding-bottom: 1em;
-  font-size: 300%;
+  font-size: 3.2vw;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 250% !important;
+  font-size: 2.6vw !important;
   font-weight: 700 !important;
 }
 
@@ -259,10 +487,15 @@ section {
 
 img.smaller {
   max-width: 60%;
+  margin-top: -1vh;
 }
 
 .center {
   text-align: center;
+}
+
+.process {
+  font-size: 1.05vw;
 }
 
 
@@ -285,6 +518,7 @@ img.smaller {
 }
 
 .info-grid-dance {
+  font-size: 1.1vw;
   display: grid;
   width: 100%;
   grid-gap: 2vw;
@@ -304,7 +538,7 @@ img.smaller {
 .project-main-cap {
   grid-area: txt;
   max-width: 100%;
-  font-size: 110%;
+  font-size: 1.15vw;
   line-height: 2;
   font-weight: 400;
   text-align: justify;
@@ -322,7 +556,7 @@ img.smaller {
 #spotify-main-cap {
   grid-area: txt;
   max-width: 100%;
-  font-size: 1.2vw;
+  font-size: 1.15vw;
   line-height: 2;
   font-weight: 400;
   text-align: justify;
@@ -337,7 +571,7 @@ img.smaller {
   display: flex;
   line-height: 1.8;
   width: 100%;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 
 .col {
@@ -389,7 +623,7 @@ img.smaller {
   display: flex;
   line-height: 1.8;
   width: 100%;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 
 .proto-item {
@@ -418,7 +652,7 @@ img.smaller {
   display: flex;
   line-height: 1.8;
   width: 100%;
-  font-size: 1vw;
+  font-size: 1.1vw;
   justify-content: space-between;
 }
 
@@ -475,16 +709,108 @@ img.smaller {
   display: flex;
   line-height: 1.8;
   width: 100%;
-  font-size: 1vw;
+  font-size: 1.15vw;
+  padding-top: 5vh;
 }
 
-.spotify-inner-flex {
-  display: flex;
-}
 
 #spotify-process-cap {
   text-align: justify;
-  font-size: 1vw;
+  font-size: 1.15vw;
+  margin-top: 2vh;/
 }
+
+.horizontal-mini-flex {
+  display: flex;
+}
+
+.mini-flex-item img, .mini-flex-item video, .mini-flex-item {
+  height: 30vh;
+  padding: 0;
+  padding-bottom: 2vh;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrap figure {
+  text-align: center;
+  align-content: center;
+}
+
+#hsv-pic {
+  width: 70%;
+  margin-left: 0.5em;
+  margin-right: -0.5em;
+  margin-top: -1.3em;
+  margin-bottom: -1em;
+}
+
+#spotify-process-right-col .bottom {
+  position: absolute;
+  bottom: 0em;
+}
+
+/*DANCE VIZ*/
+
+.horizontal-mini-flex.dance-pics {
+  justify-content: space-around;
+}
+
+.dance-gallery {
+  padding-bottom: 2vh;
+  max-height: 30vh;
+}
+
+/*STROOP*/
+
+.stroop-text {
+  line-height: 4vh;
+}
+
+#stroop-lofi-fig img {
+  height: 60vh;
+  max-width: 100%;
+}
+
+.stroop-link-flex {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+  line-height: 3em;
+}
+
+.stroop-link-button {
+  padding: 4%;
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

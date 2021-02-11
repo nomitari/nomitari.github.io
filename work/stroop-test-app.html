@@ -23,14 +23,13 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg sticky-top">
-            <a class="navbar-brand" id="brand" href="../index.html">
-                <img src="../img/brand.png" alt="brand"/>
-                <!-- Nomi Tari -->
+            <a class="navbar-brand" id="brand" href="/">
+                <img src="../img/brand.png" alt="Nomi Tari"/>
             </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link selected" href="../index.html">Portfolio</a>
+                        <a class="nav-link selected" href="/">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../contact.html">Contact</a>
@@ -42,8 +41,8 @@
         <div class="container main">
             <h1 class="title">Stroop Test App</h1>
             <section>
-                <div class="left-text">
-                    <p>
+                <div>
+                    <p class="stroop-text">
                         The Stroop Test is a test widely used in clinical psychology in which a participant is presented with  a color in word form, where the word itself is colored with a different color. For example, she might be shown something like this:  <span class="orange">GREEN</span>. The participant must attempt to quickly identify the correct color represented by the word (green) from multiple options. Developed for both iOS and Android devices, this app allows users to train and to outperform themselves in a game based on the classic Stroop Test.
                     </p>
                     <br/>
@@ -56,7 +55,30 @@
             </section>
             <section class="process">
                 <h2>Process</h2>
-                <p></p>
+                <br><br>
+                <div class="horizontal-mini-flex">
+                    <div class="left-col">
+                        <figure id="stroop-lofi-fig">
+                            <img class="full-img" src="../img/stroop-lofi.jpg">
+                        </figure>
+                    </div>
+                    <div class="col mid-col">
+                        <p class="stroop-text">
+                            I developed this app in Swift for iOS deviced and Kotlin for Android devices. I kept the visual design of the app simple and user-friendly so as to stay true to the original idea of the Stroop Test. The logic behind this implementation of the Stroop Test was the same in both Swift and Kotlin, though Kotlin required a few tweaks to avoid the app restarting on device rotation. 
+                        </p>
+                        <div class="centerlink stroop-link-flex">
+                            <div class="" style="min-width: 20vw;">
+                                <a class="link stroop-link-button" href="">Swift code</a>
+                            </div>
+                            <div class="" style="min-width: 20vw;">
+                                <a class="link stroop-link-button" href="">Kotlin code</a>
+                            </div>
+                        </div> 
+                    </div>      
+                    <div class=" right-col" id="stroop-links">
+                        
+                    </div>                         
+                </div>
             </section>
         </div>
 

@@ -23,13 +23,13 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg sticky-top">
-            <a class="navbar-brand" id="brand" href="../index.html">
-                <img src="../img/brand.png" alt="brand"/>
+            <a class="navbar-brand" id="brand" href="/">
+                <img src="../img/brand.png" alt="Nomi Tari"/>
             </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link selected" href="../index.html">Portfolio</a>
+                        <a class="nav-link selected" href="/">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../contact.html">Contact</a>
@@ -48,7 +48,7 @@
             <section class="info-grid-spotify">
                 <div>
                     <figure>
-                        <img class="project-main-pic" id="spotify-main-pic" src="../img/playlist-sorted-full.png">
+                        <img class="project-main-pic" id="spotify-main-pic" src="../img/playlist-sorted-full.png" alt="Image of sorted album covers in playlist">
                     </figure>
                 </div>
                 <div>
@@ -71,36 +71,53 @@
             <section class="process">
                 <h2>Process</h2>
                 <br>
+                <div>
+                    <p id="spotify-process-cap">
+                        Spotify Gradient uses AngularJS for back-end work and communication with the Spotify API; I considered building this program with both Vue.js and React before deciding on AngularJS. In order for my program to work, I needed to access Spotify authentication and playlist & user data. Using the available documentation and sample code, I developed the basic functionality for Spotify Gradient. 
+                    </p>
+                </div>
                 <div class="spotify-process-flex">
-                    <div class="col left-col">
-                        <p id="spotify-process-cap">
-                            <!-- 
-                            PROCESS DESCRIPTION
-                            -REACT, VUE -> ANGULARJS
-                            -BUILT ON EXISTING CODE
-                            -USED COLORTHIEF LIBRARY
-                            -FRONT-END DESIGN
-                              -->
-                              Lorem ipsum...
+                    <div class="col left-col" style="margin-right: 2vw;">
+                        <p>
+                            To sort the track covers by color, I used the existing <a class="link" href="https://lokeshdhakar.com/projects/color-thief/" target="_blank">ColorThief</a> library to extract the dominant color from each track cover image; this yielded RGB values for each color, which I converted to HSV values. 
+                        </p>
+                        <br>
+                        <div class="horizontal-mini-flex">
+                            <div>
+                                HSV values take up a 3-dimensional space. Playlists can only accommodate one dimension, so covers that are darker or lighter than a certain saturation/value threshold are sorted separately.  
+                            </div>
+                            <div id="hsv-pic">
+                                <figure>
+                                    <img class="full-img" src="../img/hsv.png" alt="HSV diagram">
+                                </figure>
+                            </div>
+                        </div>
+                        <br>
+                        <p>
+                            In between these thresholds, the covers are sorted by hue and then by value. Outside of these thresholds (predominantly black & white images), the covers are sorted by value and then by hue.
                         </p>
                     </div>
-                    <div class="col right-col spotify-inner-flex">
-                        <div class="col">
-                            <figure class="spotify-process-pic">
-                                <img class="full-img" src="../img/playlist-sorted.png">
-                            </figure>
-                            <figure class="spotify-process-pic">
-                                <img class="full-img" src="../img/playlist-sorted.png">
-                            </figure>
+                    <div class="col right-col" id="spotify-process-right-col" style="margin-left: 2vw;">
+                        <div class="horizontal-mini-flex">
+                            <div style="margin-top: 1vh;">
+                                <figure>
+                                    <img style="width: 60%; margin-left: 1vw;" src="../img/spotify-button.png" alt="button">
+                                </figure>
+                                <figure>
+                                    <img style="width: 60%; margin-left: 1vw;" src="../img/spotify-button-hover.png" alt="button">
+                                </figure>
+                            </div>
+                             <p style="margin-left: -2vw;">
+                                The layout for this program is based on the original Spotify aesthetics and uses similar colors, fonts, and structure. I focused on making the interface clean, intuitive, and simple, so as to highlight the sorting functionality that the program provides.
+                            </p>
                         </div>
-                        <div class="col">
-                            <figure class="spotify-process-pic">
-                                <img class="full-img" src="../img/playlist-sorted.png">
-                            </figure>
-                            <figure class="spotify-process-pic">
-                                <img class="full-img" src="../img/playlist-sorted.png">
-                            </figure>
-                        </div>
+                        <br>
+                        <p>
+                            With the CSS formatting and the AngularJS back-end work complete, I used Heroku to deploy my program to the web. Heroku was a good fit for this project because it offered a simple deployment environment; the point of Spotify Gradient was to experiment with the Spotify API, so there was no need for a complex deployment platform.
+                        </p>
+                        <p class="bottom">
+                            Visit Spotify Gradient <a href="https://spotify-gradient.herokuapp.com/" class="link" target="_blank">here</a>.
+                        </p>
                     </div>  
                 </div>
             </section>
