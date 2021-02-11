@@ -243,6 +243,12 @@ button, button#email-button {
   color: #fff;*/
 }
 
+button:focus, button#email-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
 .fa {
   margin: 3%;
 }
