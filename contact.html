@@ -66,21 +66,35 @@ if(IsInjected($visitor_email))
 
     </head>
     <body id="contact-body">
-        <nav class="navbar navbar-expand-lg sticky-top" style="margin-bottom: 1em;">
+        <nav class="navbar navbar-expand-lg sticky-top">
             <a class="navbar-brand" id="brand" href="/">
                 <img src="img/brand.png" alt="brand"/>
             </a>
+
+            <!-- HAMBURGER MENU - ONLY FOR SMALL SCREENS -->
+            <div class="topnav">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
+            </div>
+
+            <!-- NORMAL NAV BAR -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" id="menu">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Portfolio</a>
+                        <a class="nav-link selected" href="/">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link selected" href="contact.html">Contact</a>
+                        <a class="nav-link" href="">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
+
+        <div class="topnav" id="myLinks">
+            <a href="/">Portfolio</a>
+            <a href="">Contact</a>
+        </div>
 
         <div class="container" id="contact-page">
             <div class="contact-grid">

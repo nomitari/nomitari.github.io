@@ -17,6 +17,41 @@ body, html {
   text-align: justify;
 }
 
+/* HAMBURGER NAV */
+
+.topnav {
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+}
+
+#myLinks {
+  display: none;
+  color: #000;
+  background-color: transparent;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 2.1vw; 
+  margin-bottom: 3vw;
+  margin-top: -5vw;
+  font-size: 150%;
+}
+
+.topnav a {
+  color: #000;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  margin-top: 1em;
+}
+
+/**/
+
 a#brand, a.nav-link {
   text-decoration: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -808,9 +843,27 @@ img.smaller {
 
 /* ---------------------------------------------------------------------------------------- */
 
+@media screen and (min-width: 992px) {
+  .topnav {
+    display: none;
+  }
+
+  #myLinks {
+    display: none;
+  }
+
+}
 
 /*@media screen and (min-width: 550px) and (max-width: 600px)*/
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 991px) {
+
+  .topnav {
+    display: inline;
+  }
+
+  .navbarResponsive {
+    display: none;
+  }
 
   .portfolio-grid {
     display: flex;
