@@ -263,22 +263,22 @@ footer {
   margin: 3vh;
 }
 
-button:hover, button#email-button:hover {
+.button:hover, .button#email-button:hover {
   cursor: crosshair !important;
-  background-color: #edf0ff;
+  background-color: #f0f1ff;
+  color: #000;
 }
 
-button, button#email-button {
+.button, .button#email-button {
   font-weight: 700;
   padding: 0.7em;
   border: none;
   background-color: #edf;
   border-radius: 5px !important;
-  /*background-color: #000;
-  color: #fff;*/
+  color: #000;
 }
 
-button:focus, button#email-button:focus {
+.button:focus, .button#email-button:focus {
   outline: none;
   box-shadow: none;
 }
