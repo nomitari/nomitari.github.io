@@ -14,7 +14,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
         <!-- font -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Xanh+Mono&display=swap&family=Heebo:wght@200;500&family=Work+Sans:wght@100;200;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
         <link href="img/crown.png" rel="shortcut icon" type="image/x-icon"/>
@@ -22,69 +25,53 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg sticky-top">
-            <a class="navbar-brand" id="brand" href="/">
-                <img src="img/brand.png" alt="brand"/>
-            </a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg sticky-top" id="full-nav">
+                <div class="main-nav navbar navbar-expand-lg sticky-top">
+                    <a style="pointer-events: none;" class="navbar-brand" id="brand" href="/">
+                        <!-- <img src="img/brand.png" alt="brand"/> -->
+                        NOMI TARI
+                    </a>
 
-            <!-- HAMBURGER MENU - ONLY FOR SMALL SCREENS -->
-            <div class="topnav">
-                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
-                    <i class="fa fa-bars fa-2x"></i>
-                </a>
-            </div>
-
-            <!-- NORMAL NAV BAR -->
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto" id="menu">
-                    <li class="nav-item active">
-                        <a class="nav-link selected" href="/">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="topnav" id="myLinks">
-            <a href="#">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div class="container main">
-            <div class="portfolio-grid">
-                <div class="project-item" id="spotify">
-                    <figure>
-                        <a href="work/spotify-gradient.html">
-                            <img src="img/vinyl-gradient.png">
+                    <!-- HAMBURGER MENU - ONLY FOR SMALL SCREENS -->
+                    <div class="topnav">
+                        <a style="pointer-events: none;" href="javascript:void(0);" class="icon" onclick="hamburger()">
+                            <i class="fa fa-bars fa-2x"></i>
                         </a>
-                        <div class="project-title">Spotify Gradient</div>
-                    </figure>
+                    </div>
+
+                    <!-- NORMAL NAV BAR -->
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto" id="menu">
+                            <div class="dropdown">
+                                <li class="nav-item">
+                                    <a class="nav-link" style="pointer-events: none;" href="/">Work</a>
+                                </li>
+                                <div class="dropdown-content">
+                                    <a class="nav-link" style="pointer-events: none;" href="index.html">Portfolio</a>
+                                    <a class="nav-link" style="pointer-events: none;" href="work/other-work.html">Other Work</a>
+                                </div>
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link" style="pointer-events: none;" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="project-item" id="xylophone">
+                <!-- <div id="hamburger-links-container">
+                    <div class="topnav" id="myLinks">
+                        <a style="pointer-events: none;" href="#">Portfolio</a>
+                        <a style="pointer-events: none;" href="contact.html">Contact</a>
+                    </div>
+                </div> -->
+            </nav>
+
+            <div id="ball-gif">
+                <div>
                     <figure>
-                        <a href="work/digital-xylophone.html">
-                            <img src="img/xylophone-w-light2.png">
-                        </a>
-                        <div class="project-title">Digital Xylophone</div>
+                        <img style="max-width: 25vw;" src="img/ball.gif">
                     </figure>
-                </div>
-                <div class="project-item" id="dance">
-                    <figure>
-                        <a href="work/dance-visualizer.html">
-                            <img src="img/dance-video.png">
-                        </a>
-                        <div class="project-title">Dance Visualizer</div>
-                    </figure>
-                </div>
-                <div class="project-item" id="temp">
-                    <figure>
-                        <a href="work/stroop-test-app.html">
-                            <img src="img/stroop.png">
-                        </a>
-                        <div class="project-title">Stroop Test App</div>
-                    </figure>
+                    <p id="construction">site under construction.</p>
                 </div>
             </div>
         </div>
